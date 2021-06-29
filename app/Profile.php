@@ -15,5 +15,9 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
     );
-    
+   
+   public function rirekis()
+    {
+      return $this->hasMany('App\Rireki'); 
+    }
 }

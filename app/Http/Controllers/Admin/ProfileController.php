@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Profile;
+use App\Rireki;
+use Carbon\Carbon;
+
 
 class ProfileController extends Controller
 {
@@ -75,7 +78,12 @@ class ProfileController extends Controller
       unset($profile_form['_token']);
       // 該当するデータを上書きして保存する
       $profile->fill($profile_form)->save();
-        return redirect('admin/profile/edit');
+      $rireki = new Rireki;
+      $rireki->profile_id = $profile->id;
+      $rireki->edited_at = Carbon::now();
+      $rireki->save();
+      
+      return redirect('admin/profile/');
     }
 
 public function delete(Request $request)

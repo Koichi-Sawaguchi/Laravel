@@ -1,4 +1,4 @@
-@extends('layouts.MYprofile')
+@extends('layouts.profile')
 @section('title', 'MYprofileの編集')
 
 @section('content')
@@ -51,6 +51,20 @@
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>
+                        </div>
+                    </div>
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>更新履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->rirekis != NULL)
+                                @foreach ($profile_form->rirekis as $rireki)
+                                    <li class="list-group-item">{{ $rireki->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
