@@ -1,10 +1,5 @@
 @extends('layouts.profile')
-
-
-
-@section('title', 'マイプロフィール')
-
-
+@section('title', 'マイプロフィールの新規作成')
 @section('content')
     <div class="container">
         <div class="row">
@@ -20,31 +15,31 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">名前(name)</label>
+                        <label class="col-md-2" for="name">名前(name)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                    
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">性別(gender)</label>
+                        <label class="col-md-2" for="gender">性別(gender)</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}">
                         </div>
                     </div>
                     
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">趣味(hobby)</label>
+                        <label class="col-md-2" for="hobby">趣味(hobby)</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="2">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="hobby" rows="2">{{ old('hobby') }}</textarea>
                         </div>
                     </div>
                     
                     
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">自己紹介(gender)</label>
+                        <label class="col-md-2" for="introduction">自己紹介(introduction)</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
                     
