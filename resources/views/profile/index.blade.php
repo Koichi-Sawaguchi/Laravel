@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
             <h1>MY プロフィール</h1>
-            @if(!is_null($headline))
               <div class="form-group">
                   <label class="col-md-3" for="name">名前(name)</label>
                    <p class="name">{{ str_limit($headline->name, 140) }}</p>
@@ -25,7 +24,6 @@
                   </div>
                  </div>
                </div>
-             @endif
              </div>
         </div>
        </div>
